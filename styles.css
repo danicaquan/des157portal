@@ -1,0 +1,161 @@
+body {
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body, header {
+    font-family: 'Karla', sans-serif;
+    
+}
+main{
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+header {
+    position: relative;
+    height: 300px;
+    margin: 1em 0 2.5em 0;
+}
+
+#header {
+    position: absolute;
+    scale: 80%;
+    top: 4em;
+}
+
+#profile {
+    position: absolute; 
+    top: 3em;
+    right: 5em;
+}
+
+header p {
+    position: absolute;
+    top: 8em;
+    left: 6em;
+    padding: 1em;
+    background-color: white;
+    border-radius: 1em;
+    z-index: 1;
+}
+
+img {
+    border-radius: 1em;
+}
+
+header h1 {
+    position: absolute;
+    margin : 0;
+    font-size: 3em;
+    top: 0.3em;
+    left: 0.8em;
+    color: white;
+}
+
+#name {
+ top: 0.8em;
+ left: 4em;
+}
+
+#hp {
+    border: 1px solid white;
+    width: 15em;
+    height: 2em;
+    border-radius: 1em;
+    position: absolute;
+    top: 13em;
+    right: 18em;
+    background-color: black;
+}
+
+#hpleft {
+    width: 25%;
+    height: 2em;
+    background-color: red;
+    border-radius: 1em 0px 0px 1em;
+    rotate: 180deg;
+    margin-left: 75%;
+}
+
+#mp {
+    border: 1px solid white;
+    width: 15em;
+    height: 2em;
+    border-radius: 1em;
+    position: absolute;
+    top: 16em;
+    right: 18em;
+    background-color: black;
+}
+
+#mpleft {
+    width: 10%;
+    height: 2em;
+    background-color: blue;
+    border-radius: 1em 0px 0px 1em;
+    rotate: 180deg;
+    margin-left: 90%;
+}
+
+article {
+    display: flex;
+}
+
+ul {
+    list-style: none ;
+    background-color: white;
+    padding: 1em 1em 1em 0;
+    width: 15em;
+}
+ul li:before
+{
+    content: '◆';
+    margin: 0 1em;
+}
+
+article h2 {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    background-color: black;
+    color: white;
+    -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+    margin: 0;
+    padding: .5em .5em 3em .5em ;
+}
+
+article h3 {
+    background-color: black;
+    color: white;
+    padding: 0.5em 1.5em;
+    width: 10.7em;
+}
+
+#rd{
+    margin: 1.5em 0 0 0;
+}
+
+#final {
+    margin: 3em 0 0 0;
+}
+
+#moomoo {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    scale: 80%;
+    animation: mooMoves 5s alternate infinite;
+}
+
+@keyframes mooMoves {
+    
+    50% {
+        transform: translateX(10em) ;
+    }
+    100% { 
+        transform: translateX(10em) rotateY(180deg);
+    }
+}

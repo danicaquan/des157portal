@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1</title>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>To open the console, right click the page and choose "inspect" from the menu. An interface should pop up with multiple tabs. Click console. You should be able to see the code be executed there.</h2>
+
+    <script>
+        //I actually wrote multiple types of "experiments", 
+        
+        var string = prompt("Tell me something, and I'll tell you it back, but lIkE tHiS", "H-hewwo?")
+        var newString=""
+
+        //The current one in use is code to alternate the case of whatever the user inputs by taking each part of the string (through a loop) and capitlizing it depending on its remainder, which identifies it as an odd or even item in the sequence. Because you cannot change a string, it is made into a new string.
+        
+        for (i=0; i<string.length; i++ ) {
+            if (i%2 == 1) {
+            newString += string[i].toUpperCase();}
+            else {
+            newString += string[i].toLowerCase();
+            }
+        } 
+
+        //This code reverses the letters of a sentence put in by the user but keeps the words in place. I couldn't quite find out a more simple way of doing it outside of using functions we are not technically supposed to for this assignment, so the way I coded it will always add an extra space in front of everything. 
+
+        //It's a nestled loop that analizies an a string that has been split by the spaces in between each word, making each word an item in an array as opposed to each letter. The first loop goes through each word in a forward manner while the second loop inserts each individual letter of thoses words into the new string backwards. A space is added before every word.
+        
+        /*
+        var array = string.split(" ");
+        for (i=0; i<=array.length-1; i++ ) {
+            newString += " "
+        for (j=array[i].length-1; j>=0; j-- ) {
+            newString += array[i][j];
+        }
+    }
+    */
+       
+        console.log(newString) 
+
+        //This is the code to write the pound sign pyrmaid. It is created similarly to the others, with a "#" being added to the string with each iteration of the loop, making it build up to 7 "#" in a row.
+        /* 
+        var text = "";
+        for (length=0; length<7; length++) {
+            text += "#";
+            console.log(text);
+        }
+        */
+    </script>
+</body>
+</html>
