@@ -1,16 +1,14 @@
 body {
+    font-family: 'Karla', sans-serif;
     background-image: url(images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
-body, header {
-    font-family: 'Karla', sans-serif;
-    
-}
+
 main{
     display: flex;
-    margin: auto;
     justify-content: space-evenly;
+    margin: auto;
 }
 
 header {
@@ -21,22 +19,44 @@ header {
 
 #header {
     position: absolute;
-    scale: 80%;
+    max-width: 80%;
+    height: auto;
     top: 4em;
+    left: 5em;
+    z-index: -10;
 }
 
-#profile {
+#profileContainer {
     position: absolute; 
     top: 3em;
     right: 5em;
+    background-image: url(images/profile2.png);
+    background-repeat: no-repeat;
+    background-size: 250px;
+    border-radius: 1em;
+}
+
+#profile:hover {
+    border-radius: 1em;
+    animation: animateProfile 2s infinite;
+}
+
+@keyframes animateProfile {
+    
+    50% {
+        opacity:0 ;
+    }
+    100% { 
+        opacity:1;
+    }
 }
 
 header p {
     position: absolute;
     top: 8em;
     left: 6em;
-    padding: 1em;
     background-color: white;
+    padding: 1em;
     border-radius: 1em;
     z-index: 1;
 }
@@ -47,56 +67,64 @@ img {
 
 header h1 {
     position: absolute;
-    margin : 0;
-    font-size: 3em;
     top: 0.3em;
     left: 0.8em;
+    font-size: 3em;
     color: white;
+    margin : 0;
 }
 
 #name {
- top: 0.8em;
- left: 4em;
+    top: 0.8em;
+    left: 4em;
 }
 
 #hp {
-    border: 1px solid white;
-    width: 15em;
-    height: 2em;
-    border-radius: 1em;
     position: absolute;
     top: 13em;
     right: 18em;
     background-color: black;
-}
-
-#hpleft {
-    width: 25%;
-    height: 2em;
-    background-color: red;
-    border-radius: 1em 0px 0px 1em;
-    rotate: 180deg;
-    margin-left: 75%;
-}
-
-#mp {
     border: 1px solid white;
     width: 15em;
     height: 2em;
     border-radius: 1em;
+}
+
+#hpleft {
+
+    background-color: red;
+    width: 40%;
+    height: 2em;
+    border-radius: 1em 0px 0px 1em;
+    transition: 2s ease-in-out;
+    
+}
+
+#hp:hover #hpleft{
+    width: 10%;
+}
+
+#mp {
     position: absolute;
     top: 16em;
     right: 18em;
     background-color: black;
+    border: 1px solid white;
+    width: 15em;
+    height: 2em;
+    border-radius: 1em;
 }
 
 #mpleft {
-    width: 10%;
-    height: 2em;
     background-color: blue;
+    width: 30%;
+    height: 2em;
     border-radius: 1em 0px 0px 1em;
-    rotate: 180deg;
-    margin-left: 90%;
+    transition: 1s ease-in-out;
+}
+
+#mp:hover #mpleft{
+    width: 6%;
 }
 
 article {
@@ -108,11 +136,19 @@ ul {
     background-color: white;
     padding: 1em 1em 1em 0;
     width: 15em;
+    border-radius: 0 1em 1em 0;
 }
-ul li:before
+ul li
 {
-    content: '◆';
+    list-style-type: '◆';
     margin: 0 1em;
+    padding: 0 0 0 0.5em;
+}
+
+#experiments {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 article h2 {
@@ -120,9 +156,9 @@ article h2 {
     text-orientation: upright;
     background-color: black;
     color: white;
-    -webkit-text-fill-color: black; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
+    -webkit-text-fill-color: black; 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
     margin: 0;
     padding: .5em .5em 3em .5em ;
 }
@@ -130,8 +166,8 @@ article h2 {
 article h3 {
     background-color: black;
     color: white;
-    padding: 0.5em 1.5em;
-    width: 10.7em;
+    padding: 0.5em;
+    width: 12.7em;
 }
 
 #rd{
@@ -144,18 +180,33 @@ article h3 {
 
 #moomoo {
     position: absolute;
-    left: 0;
-    bottom: 0;
-    scale: 80%;
-    animation: mooMoves 5s alternate infinite;
+    left: 1em;
+    bottom: -1.2em;
+    transform: scale(0.8);
+    animation: mooMoves 10s  infinite;
 }
 
 @keyframes mooMoves {
-    
-    50% {
-        transform: translateX(10em) ;
+    40% {
+        transform: translateX(20em) ;
     }
-    100% { 
-        transform: translateX(10em) rotateY(180deg);
+    70% { 
+        transform: translateX(20em) rotateY(180deg);
     }
+    95% { 
+        transform: rotateY(180deg);
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right:45%;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: red;
 }
