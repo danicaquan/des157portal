@@ -1,0 +1,65 @@
+body {
+    background-color: black;
+    font-family: 'Karla', sans-serif;;
+}
+
+img {
+    border-radius: 1em;
+    scale:50%;
+    position: fixed;
+    border: black solid;
+    border-width: 5em 5em 10em 5em;
+    border-radius: 3em;
+}
+
+main {
+    background-color: #181818;
+}
+#portal {
+    text-align: center;
+    position: fixed;
+    top: 32em;
+    left: 17em;
+    color:white;
+}
+article {
+    background-color: white;
+    padding: 3em 5em;
+    position: relative;
+    width: 30em;
+    overflow-wrap: break-word;
+    border-radius: 0.5em;
+    margin: 5em 37em;
+}
+
+div {
+     padding: 2em 0 0 0;
+}
+
+article:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 10px solid white;
+    border-left: 10px solid transparent;
+    border-top: 10px solid white;
+    border-bottom: 10px solid transparent;
+    left: -1em;
+    top: 10em;
+  }
+
+  header {
+    background-color: black;
+    width: 100%;
+    color: white;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+
+  p {
+    line-height: 1.5em;
+  }
+
