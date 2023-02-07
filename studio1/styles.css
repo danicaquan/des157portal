@@ -1,0 +1,90 @@
+body{
+    background-color: black;
+}
+
+h1 {
+    font-family: "lullabies-heavy", sans-serif;
+    color: white;
+    font-size: 15vh;
+    line-height: 1em;
+    margin:0;
+    width: 50%;
+    text-align: center;
+    float: right;
+}
+
+div{
+    text-align: center;
+    margin: auto;
+    position: relative;
+}
+
+#panel2 p {
+    position: absolute;
+    width: 10em;
+    top: 10%;
+    left: 10%;
+}
+
+#panel3 p {
+    position: absolute;
+    width: 10em;
+    top: 20%;
+    left: 8%;
+}
+
+#panel4 p {
+    position: absolute;
+    width: 10em;
+    top: 25%;
+    right: -4%;
+}
+
+#panel5 p {
+    position: absolute;
+    width: 10em;
+    top: 25%;
+    right: 4%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+header {
+    background-image: url(images/header-art.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1em;
+    padding: 2em;
+    float: right;
+    margin: 5em;
+}
+
+
+
+@media only screen and (min-width: 600px) {
+   header {
+    background-position: center;
+    background-size: 85%;
+   }
+
+   #comic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+   }
+
+   div {
+    display: inline-block;
+   }
+
+   #panel3 {
+    display: block;
+   }
+}

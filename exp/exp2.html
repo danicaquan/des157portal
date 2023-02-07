@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Experiment 2</title>
+
     <style>
         body {
             text-align: center;
         }
     </style>
+    
 </head>
 
 <body>
@@ -25,32 +27,35 @@
         var text = document.querySelector('p');
         var img = document.querySelector('img');
 
+        function whichAnimal (userInput) {
         if (userInput=="dog") {    
-            var link = img.setAttribute('src', 'https://i.kym-cdn.com/photos/images/original/002/357/433/996.png');
+            img.setAttribute('src', 'https://i.kym-cdn.com/photos/images/original/002/357/433/996.png');
         }
         else if (userInput=="cat"){
-            var link = img.setAttribute('src', 'https://i.kym-cdn.com/photos/images/original/002/307/561/aff.jpg');
+            img.setAttribute('src', 'https://i.kym-cdn.com/photos/images/original/002/307/561/aff.jpg');
         }
         else if (userInput=="bird"){
-            var link = img.setAttribute('src', 'https://i.kym-cdn.com/entries/icons/original/000/038/746/tco_-_2021-11-03T112847.920.jpg');
+            img.setAttribute('src', 'https://i.kym-cdn.com/entries/icons/original/000/038/746/tco_-_2021-11-03T112847.920.jpg');
             img.style.width ="60%";
         }
         else if (userInput=="goose"){
-            var link = img.setAttribute('src', 'https://i.kym-cdn.com/photos/images/original/001/597/651/360.jpg');
+            img.setAttribute('src', 'https://i.kym-cdn.com/photos/images/original/001/597/651/360.jpg');
         }
         else if (userInput=="hamster"){
-            var link = img.setAttribute('src', 'https://pbs.twimg.com/media/EUlr9GUUUAI8iUC.jpg');
+            img.setAttribute('src', 'https://pbs.twimg.com/media/EUlr9GUUUAI8iUC.jpg');
             img.style.width ="50%";
         }
         else if (userInput=="capybara"){
-            var link = img.setAttribute('src', 'https://i.redd.it/35fxmwj751s91.jpg');
+            img.setAttribute('src', 'https://i.redd.it/35fxmwj751s91.jpg');
             img.style.width ="50%";
         }
         else {
-            var link = img.setAttribute('src', 'https://pbs.twimg.com/media/FRltVYVacAAiu3v?format=jpg&name=900x900');
+            img.setAttribute('src', 'https://pbs.twimg.com/media/FRltVYVacAAiu3v?format=jpg&name=900x900');
             img.style.width ="30%";
             text.innerHTML = "You didn't choose any of the listed animals. Now she is staring at you.";
         }
+    }
+        whichAnimal(userInput);
 
     </script>
 </body>
