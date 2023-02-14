@@ -8,12 +8,12 @@ h1 {
     font-size: 15vh;
     line-height: 1em;
     margin:0;
-    width: 50%;
+    width: 60%;
     text-align: center;
     float: right;
 }
 
-div{
+#comic div{
     text-align: center;
     margin: auto;
     position: relative;
@@ -22,35 +22,31 @@ div{
 #panel2 p {
     position: absolute;
     width: 10em;
-    top: 10%;
-    left: 10%;
+    top: 11%;
+    left: 8.5%;
 }
 
 #panel3 p {
     position: absolute;
     width: 10em;
     top: 20%;
-    left: 8%;
+    left: 5%;
 }
 
 #panel4 p {
     position: absolute;
     width: 10em;
     top: 25%;
-    right: -4%;
+    right: -6%;
 }
 
 #panel5 p {
     position: absolute;
-    width: 10em;
+    width: 8em;
     top: 25%;
-    right: 4%;
+    right: 3%;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
 header {
     background-image: url(images/header-art.png);
     background-size: contain;
@@ -63,9 +59,39 @@ form {
     border-radius: 1em;
     padding: 2em;
     float: right;
-    margin: 5em;
+    margin-right: 10vw;
+    width: 30vw;
+    text-align: center;
 }
 
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+label{
+    display: block;
+    text-align: left;
+}
+
+header div {
+    display: inline-block;
+    padding: 0.5em;
+}
+
+#submit {
+    display: block;
+    padding: 0.5em;
+    margin: 1em auto auto auto;
+}
+
+
+#comic h2 {
+    display: none;
+}
 
 
 @media only screen and (min-width: 600px) {
@@ -74,7 +100,7 @@ form {
     background-size: 85%;
    }
 
-   #comic {
+   .show {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -86,5 +112,10 @@ form {
 
    #panel3 {
     display: block;
+   }
+
+   form {
+    margin-left: 10vw; 
+    margin-top: 0;
    }
 }
