@@ -19,6 +19,15 @@ h1 {
     position: relative;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#comic p {
+    
+}
+
 #panel2 p {
     position: absolute;
     width: 10em;
@@ -59,10 +68,20 @@ form {
     border-radius: 1em;
     padding: 2em;
     float: right;
-    margin-right: 10vw;
-    width: 30vw;
     text-align: center;
+    font-family: 'Futura';;
 }
+
+h2 {
+    font-family: 'Futura';
+}
+
+p {
+    font-family: 'Patrick Hand', cursive;
+}
+ #panel3 p {
+    font-family: 'Niconne', cursive;
+ }
 
 .hidden {
     display: none;
@@ -115,7 +134,8 @@ header div {
    }
 
    form {
-    margin-left: 10vw; 
+    margin-right: 10vw; 
     margin-top: 0;
+    width: 30vw;
    }
 }
