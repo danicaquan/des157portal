@@ -24,10 +24,6 @@ img {
     height: auto;
 }
 
-#comic p {
-    
-}
-
 #panel2 p {
     position: absolute;
     width: 10em;
@@ -69,7 +65,7 @@ form {
     padding: 2em;
     float: right;
     text-align: center;
-    font-family: 'Futura';;
+    font-family: 'Futura';
 }
 
 h2 {
