@@ -1,5 +1,8 @@
 
-img {
+body {
+    margin: 0;
+}
+figure img {
     height: 90vh;
     position:relative;
     transition: 3s;
@@ -56,54 +59,58 @@ body::before {
 }
 
 .sins {
- width: 50px;
- height: 50px;
+ width: 100px;
+ height: 100px;
  border-radius: 50%;
- background-color: turquoise;
+ background-color: rgba(102, 0, 0, 0.8);
  position: absolute;
  opacity: 0;
  transition: opacity 3s 2s;
+ text-align: center;
+ vertical-align: middle;
+ color: rgba(255, 255, 255, 0.4);
 }
 
-
+.sins:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.8);
+}
 
 #wrath {
-    top: 15vh;
+    top: 20vh;
     right: 20vw;
 }
 
-#wrath:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-}
+
 
 #gluttony {
-    top: 10vh;
+    top: 15vh;
     right: 30vw;
 }
 
 #lust {
-    top: 12vh;
+    top: 17vh;
     right: 40vw;
 }
 
 #envy {
-    top: 20vh;
+    top: 25vh;
     right: 50vw;
 }
 
 #sloth {
-    top: 32vh;
+    top: 37vh;
     right: 58vw;
 }
 
 #greed {
-    top: 45vh;
-    right: 62vw;
+    top: 50vh;
+    right: 65vw;
 }
 
 #pride {
-    top: 60vh;
-    right: 60vw;
+    top: 67vh;
+    right: 68vw;
 }
 
 .info {
@@ -124,8 +131,46 @@ body::before {
 .info div {
     background-color: white;
     border-radius: 2em;
-    height: 30vh;
     width: 40vw;
     padding: 3em;
     align-self: center;
+    position: relative;
+}
+
+h1 {
+    font-family: "louvette-banner", serif;
+    position: absolute;
+    left: 5vw;
+    top: 0;
+    margin:1vh;
+    font-size: 5em;
+    z-index: 2;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20vw;
+}
+
+#return {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.back {
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: black;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    outline: none;
 }

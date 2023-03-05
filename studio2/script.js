@@ -16,7 +16,7 @@
     const pride = document.querySelector('#pride');
     */
 
-    const returnBtn = document.querySelector('#ok');
+    const returnBtn = document.querySelector('#return');
     const backInfo = document.querySelectorAll('.info button');
 
     indicator.addEventListener('mouseover', function(){
@@ -32,6 +32,7 @@
         for (let i =0; i<sins.length; i++){
         sins[i].style.opacity = '100%';
         indicator.style.display = 'none';
+        returnBtn.style.display = 'block';
     }
     });
 
@@ -40,6 +41,7 @@
         for (let i =0; i<sins.length; i++){
         sins[i].style.opacity = '0';
         indicator.style.display = 'block';
+        returnBtn.style.display = 'none';
     }
     });
 
