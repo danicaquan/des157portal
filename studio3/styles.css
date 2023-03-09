@@ -76,16 +76,27 @@ h1:before {
     justify-content: space-between;
 }
 
-#gameinfo{
+#overlay{
     position: absolute;
     background-color: white;
     height: 100vh;
     width: 100vw;
     display: none;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+
+}
+#gameinfo{
+    background-color: white;
+    display: none;
+    color: black;
+
 }
 #openinfo {
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid white;
+    color: white;
     background-color: rgba(0, 0, 0, 0);
     width: 30px;
     height: 30px;
@@ -93,14 +104,18 @@ h1:before {
     vertical-align: middle;
     line-height: 10px;
     position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 .activeplayer {
-    background-color: rgba(255, 255, 255, 0.5)
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 50px 15px white;
 }
 
 .nonactiveplayer {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     opacity: 50%;
 }
 
@@ -114,4 +129,12 @@ h1:before {
 img {
     width: 200px;
     height: 200px;
+}
+
+#yelan {
+width: 50%;
+height:auto;
+position: absolute;
+top: 30vh;
+left: 25%;
 }
