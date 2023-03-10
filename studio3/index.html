@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game of Pig</title>
+    <title>Welcome to Yansheng Teahouse</title>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/ygf2fzk.css">
 	<link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
     <h1>Let's play a game of Pig</h1>
     <button id="openinfo">i</button>
-    <div id="gameinfo">
-        <p>There are two players. The player whose turn it is rolls the dice. The total of the roll is added to the current player's score, unless either die comes up as a "one". If this happens, this player's turn is over, and it is the other player’s turn. After each roll, the current player can either roll again, (assuming a "one" was not rolled) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins.</p> 
-        <p>Oh, and if you roll two "ones" (snake eyes), your current score gets zeroed out. So don’t do that.</p>
+    <div id="overlay" class="closed">
+        <section id="gameinfo">
+            <h2>Game Rules:</h2>
+            <p>There are two players--in this case, one player and a CPU. The player whose turn it is rolls the dice. The total of the roll is added to the current player's score, unless either die comes up as a "one". If this happens, this player's turn is over, and it is the other player’s turn. After each roll, the current player can either roll again, (assuming a "one" was not rolled) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins.</p> 
+            <p>Oh, and if you roll two "ones" (snake eyes), your current score gets zeroed out. So don’t do that.</p>
+            <button id="closeinfo">Got It</button>
+        </section>
     </div>
-
+    
     <img id="yelan" src="images/yelan.png">
+    <img id="table" src="images/table.png">
     <h2 id="announcement"></h2>
-    <div id="gamecontrol">
+    <p id="subannouncement"></p>
+    <div id="gamecontrol" class ="controlstart">
         <button id="startgame">Randomly Pick the First Player, and Start the Game</button>
     </div>
     <section id="scoreboard">

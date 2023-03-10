@@ -1,19 +1,38 @@
 body {
-    font-family: Arial;
+    font-family: "lores-9-narrow", sans-serif;
     color: white;
     line-height: 1.5em;
     background-image: url(images/background.png);
     background-size:cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 95vh;
+    overflow:hidden;
 }
 
 button { 
     padding: 10px;
 }
 
+button:hover {
+    background-color: #48abe0;
+    color:white;
+}
+
 div {
     padding: 5px;
+}
+
+#announcement {
+    font-family: "macula-line";
+    animation: float 5s ease-in-out infinite;
+    margin: 1.5em 0 0 0;
+}
+#subannouncement {
+    position: absolute;
+    left: 50vw;
+    width: 25vw;
+    text-align: center; 
+    transform: translate(-50%, -50%);
 }
 
 #gamecontrol, h1, h2 {
@@ -24,18 +43,17 @@ h1{
     animation: float 5s ease-in-out infinite;
     text-align: center;
     text-transform: uppercase;
-    font-weight: bold;
     letter-spacing: 3px;
     width: 60vw;
     margin: 4vh auto;
-    
+    font-family: "macula-line";
     font-size: 5vh;
     color: black;
     background-color: white;
     padding: 50px;
     border-radius: 11px;
     position: relative;
-    box-shadow: 20px 20px blue;
+    box-shadow: 20px 20px #324ea8;
 }
 
 h1:before {
@@ -78,26 +96,40 @@ h1:before {
 
 #overlay{
     position: absolute;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.6);
     height: 100vh;
     width: 100vw;
-    display: none;
     position: absolute;
-    height: 100vh;
-    width: 100vw;
-
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 #gameinfo{
     background-color: white;
-    display: none;
     color: black;
+    width: 80vw;
+    padding: 3em;
+    border-radius: 1em;
+    margin: auto;
+    transform: translate(0, 50%);
+    text-align: center;
+}
 
+#gameinfo p {
+    text-align: left;
+}
+
+.open {
+    display: block;
+}
+.closed {
+    display: none
 }
 #openinfo {
     border-radius: 50%;
     border: 1px solid white;
     color: white;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.1);
     width: 30px;
     height: 30px;
     text-align: center;
@@ -106,6 +138,9 @@ h1:before {
     position: absolute;
     top: 10px;
     left: 10px;
+}
+#openinfo:hover {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .activeplayer {
@@ -119,11 +154,18 @@ h1:before {
     opacity: 50%;
 }
 
-.controlquit {
+#gamecontrol {
     position: absolute;
     left: 50vw;
-    bottom: 0;
     transform: translate(-50%, -50%);
+}
+
+.controlstart {
+    bottom: 5%;
+}
+
+.controlquit {
+    bottom: -5%;
 }
 
 img {
@@ -131,11 +173,20 @@ img {
     height: 200px;
 }
 
+#table {
+    position: absolute;
+    width: 100vw;
+    height: 21vh;
+    bottom: 0;
+    z-index: -2;
+}
 
 #yelan {
-width: 50%;
-height:auto;
-position: absolute;
-top: 30vh;
-left: 25%;
+    width: 90vh;
+    height:auto;
+    position: absolute;
+    top: 15vh;
+    left: 50vw;
+    z-index: -1;
+    transform: translate(-50%, 0);
 }

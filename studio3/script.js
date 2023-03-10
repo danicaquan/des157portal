@@ -9,16 +9,20 @@
     const cpuScore = document.getElementById('cpuscore');
     const actionArea = document.getElementById('actions');
     const announcement =document.getElementById('announcement')
+    const subAnnouncement =document.getElementById('subannouncement')
     const infoBtn = document.getElementById('openinfo');
+    const closeBtn = document.getElementById('closeinfo');
     const playerArea = document.getElementById('player')
     const cpuArea = document.getElementById('cpu');
 
     const diceRollSound = new Audio('audio/diceRoll.mp3');
     diceRollSound.volume = 0.2;
-    
 
     infoBtn.addEventListener('click', function(){
-        document.querySelector('#gameinfo').style.display= 'block';     
+        document.querySelector('#overlay').className= 'open';     
+    });
+    closeBtn.addEventListener('click', function(){
+        document.querySelector('#overlay').className= 'closed';     
     });
 
     document.addEventListener("keydown", function(event){
@@ -58,6 +62,7 @@
     function setUpTurn(){
         announcement.innerHTML = `<p>Rolling the dice for ${gameData.players[gameData.index]}</p>`;
         
+        subAnnouncement.innerHTML="";
 
         if (gameData.index == 0){
         playerArea.className='activeplayer';
@@ -98,7 +103,7 @@
         gameData.rollSum = gameData.roll1 + gameData.roll2;
 
         if (gameData.rollSum == 2){
-            announcement.innerHTML += `<p>Oh snap! ${gameData.players[gameData.index]} rolled Snake Eyes!</p>`;
+            subAnnouncement.innerHTML = `<p>Oh snap! ${gameData.players[gameData.index]} rolled Snake Eyes!</p>`;
             gameData.score[gameData.index] = 0;
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             setTimeout(setUpTurn, 2000);
@@ -106,7 +111,7 @@
         }
         else if (gameData.roll1 == 1 || gameData.roll2 == 1){
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-            announcement.innerHTML += `Sorry, one of your rolls was a 1. Switching to ${gameData.players[gameData.index]}`;
+            subAnnouncement.innerHTML = `Sorry, one of your rolls was a 1. Switching to ${gameData.players[gameData.index]}`;
             setTimeout(setUpTurn, 2000);
         }
 
