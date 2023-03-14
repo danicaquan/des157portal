@@ -78,7 +78,7 @@
         cpuArea.className='activeplayer';
         playerArea.className='nonactiveplayer';
                 if (gameData.score[gameData.index] < gameData.gameEnd){
-                    setTimeout(throwDice, 1000);;
+                    setTimeout(throwDice, 1000);
                 }
                 else {
                     checkWinningCondition();

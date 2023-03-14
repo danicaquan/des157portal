@@ -1,0 +1,113 @@
+
+img {
+    position:absolute;
+}
+
+.mori-active {
+    width: 30%;
+    left:0;
+    bottom: 0;
+}
+
+#table {
+    width: 70%;
+    bottom: 0;
+    left: 50vw;
+    transform: translate(-50%, 0);
+}
+
+.twinkle-active {
+    width: 30%;
+    right:0;
+    bottom: 10vh;
+}
+
+#startscreen {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(images/start.png);
+    background-size: cover;
+}
+
+h1{
+    text-align: center;
+}
+
+#start {
+    position: absolute;
+    left: 50vw;
+    bottom: 5vh;
+    transform: translate(-50%, -50%);
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+#cpuhealth {
+    position: absolute;
+    top: 10vh;
+    right: 5vw;
+    background-color: black;
+    border: 1px solid white;
+    width: 15em;
+    height: 2em;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+#cpuhealthleft { 
+    background-color: red;
+    width: 100%;
+    height: 2em;
+    border-radius: 1em;
+    transition: 1s ease-in-out;
+}
+
+#playerhealth {
+    position:absolute;
+    bottom: 10vh;
+    left: 5vw;
+    background-color: black;
+    border: 1px solid white;
+    width: 20em;
+    height: 2em;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+#playerhealthleft {
+    background-color: red;
+    width: 100%;
+    height: 2em;
+    border-radius: 1em;
+    transition: 1s ease-in-out; 
+}
+
+#cpu {
+    position: absolute;
+    right: 25vw;
+    top: 35vh;
+}
+
+.dicearea img {
+    position:static;
+}
+
+#player {
+    position: absolute;
+    top: 60vh;
+    left: 25vw;
+}
+
+#player button {
+    display: block
+}
+
+#announcement { 
+    text-align: center;
+}
