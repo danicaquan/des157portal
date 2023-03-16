@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duel of Dice</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="startscreen" class="show">
+        <img id="startscreenimg" src="images/start.png">
+        <img id="floatingdice" src="images/dice.png">
+        <h1>Let's Settle This Argument with a Game of Dice</h1>
+        <button id="start">Start</button>
+    </div>
+
+    <div id="overlay" class="hide">
+        <section id="gameinfo">
+            <h2>Game Rules:</h2>
+            <p>It's similar to a game of war. The CPU-in this case, Twinkle, goes first. The player--Mori--then decides to Block or Attack based off of what Twinkle rolls. If Mori chooses Attack, then Mori must roll higher than Twinkle and Twinkle takes the damage of the difference in their rolls. If Mori chooses attack and loses then roll, then he takes the full damage of Twinkle's roll. If Mori chooses to block, then Mori will mitigate the damage he recieves from Twinkle based off the difference of you rolls. If you roll higher than Twinkle when blocking, you take no damage. Be careful about when you block and when you attack.</p> 
+            <p>This is currently skewed towards Twinkle, and I'm still in the process of balancing the game.</p>
+            <button id="closerules">Got It</button>
+        </section>
+    </div>
+    
+    <div id="gamearea" class="hide">
+        <img id="twinkle"class="twinkle-nonactive" src="images/twinkle.png">
+        <img id="table" src="images/table.png">
+        <img id="mori" class="mori-nonactive" src="images/mori.png">
+        
+        <div id="announcement">
+        </div>
+    
+        <div id="player"class="dicearea">
+        </div>
+        <div id="playerhealth">
+            
+            <div id="playerhealthleft">
+                20/20
+            </div>
+        </div>
+        <div id="cpu" class="dicearea">
+        </div>
+        <div id="cpuhealth">
+            <div id="cpuhealthleft">
+              20/20
+            </div>
+        </div>
+    </div>
+
+    <div id="controlmenu">
+        <button id="quit">Quit</button>
+        <button id="rules">Rules</button>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,218 @@
+
+body {
+    overflow:hidden;
+    background-color: rgb(254, 247, 222);
+}
+img {
+    position:absolute;
+}
+
+#mori {
+    height: 100vh;
+    transition: 1s;
+}
+.mori-active {
+    left:0vw;
+    bottom: 0;
+    opacity: 100%;
+}
+
+.mori-nonactive {
+    left:-40vw;
+    bottom: -5vh;
+    opacity: 0;
+}
+
+#table {
+    width: 100vw;
+    bottom: -10vh;
+    left: 50vw;
+    transform: translate(-50%, 0);
+}
+
+#twinkle {
+    height: 90vh;
+    transition: 1s;
+}
+
+.twinkle-active {
+    right:0;
+    bottom: -5vh;
+}
+.twinkle-nonactive {
+    right:-35vw;
+    bottom: 0;
+}
+
+#startscreen {
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1{
+    text-align: center;
+}
+
+#start {
+    position: absolute;
+    left: 50vw;
+    bottom: 5vh;
+    transform: translate(-50%, -50%);
+}
+
+.show {
+    visibility: visible;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+#cpuhealth {
+    position: absolute;
+    top: 10vh;
+    right: 2vw;
+    background-color: black;
+    border: 1px solid white;
+    width: 15em;
+    height: 2em;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+#cpuhealthleft { 
+    background-color: red;
+    width: 100%;
+    height: 2em;
+    border-radius: 0.5em;
+    line-height: 2em;
+    transition: 1s ease-in-out;
+}
+
+#playerhealth {
+    position:absolute;
+    bottom: 10vh;
+    left: 5vw;
+    background-color: black;
+    border: 1px solid white;
+    width: 20em;
+    height: 2em;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+#playerhealthleft {
+    background-color: red;
+    width: 100%;
+    height: 2em;
+    border-radius: 0.5em;
+
+    line-height: 2em;
+    transition: 1s ease-in-out; 
+}
+
+#cpu {
+    position: absolute;
+    right: 25vw;
+    top: 35vh;
+}
+
+.dicearea img {
+    position:static;
+}
+
+#player {
+    position: absolute;
+    top: 60vh;
+    left: 25vw;
+}
+
+#player button {
+    display: block
+}
+
+#announcement { 
+    text-align: center;
+}
+
+#startscreenimg {
+    height: 100vh;
+    width: auto;
+    left: 50vw;
+    top: 5vh;
+    transform: translate(-50%, 0);
+    position: absolute;
+}
+
+#floatingdice {
+    width: 100vw;
+    top: -5vh;
+    position: absolute;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+      transform: translatey(1px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+
+  #controlmenu {
+    position:absolute;
+    bottom: 5vh;
+    right: 5vw;
+  }
+  
+  #overlay{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+#gameinfo{
+    background-color: white;
+    color: black;
+    width: 80vw;
+    padding: 3em;
+    border-radius: 1em;
+    margin: auto;
+    transform: translate(0, 50%);
+    text-align: center;
+}
+
+#gameinfo p {
+    text-align: left;
+}
+
+.hurt {
+    animation: hurt 0.5s ease-in-out;
+}
+
+@keyframes hurt {
+    0% {
+      transform: translatex(0px);
+    }
+    35% {
+      transform: translatex(-20px);
+    }
+    70% {
+      transform: translatex(20px);
+    }
+    100% {
+
+      transform: translatex(0px);
+    }
+  }
