@@ -5,20 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Testing Results</title>
+    <link rel="stylesheet" href="https://use.typekit.net/byw8asc.css">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <h1>User Testing Results</h1>
-    <h3>Will add some styling later!!! If you see this before then, I'll comment on the assignment and let you know it has been updated.</h3>
+    <div class="wrapper">
+        <h1 data-text="User Testing Results">User Testing Results</h1>
+   </div>
+<div id="content">
+   <article>
     <a href="version2/index.html">Link to the User Test Site</a>
-    <h2>Observations</h2>
-    <ol>
-        <li>Overall, the actual gameplay seems fine, according to my testers. I was struggling with how I wanted to structure it because I felt like the current way--which is if you roll lower when choosing attack, you take the full amount of the CPU roll off of your health while if you roll higher then the CPU only takes the difference (and they take no damage no matter what if you block but you will still take some damage if you roll lower)--penalizes you a lot if you happen to roll poorly against a relatively reasonable roll from the CPU. At the same time,if I made it so that if you lose the difference between your rolls when you roll lower while attacking, it would take away a lot of incentive to block instead of attack. I think mitigating the damage to always be a low number, like 1, could be a solution to give you incentive, but the game might drag on, or it might be biased towards the user. To be fair, my users weren't entirely sure of the rules and only really did one trial so that might influence their feedback.</li>
-        <li>What is there so far seems to be okay for function. The general consensus is that I need to implement more styling to make the UI more fluid, which is something I am already aware of an plan to do.</li>
-        <li>I was contemplating a few ways to implement rules, as it is crucial to understanding how to play and how to strategize. As it is, with a simple small button, it really doesn't serve the purpose it needs to because my testers immediately wen in the game and didn't even realize it was there.</li>
-    </ol>
-    <h2>Plans for Implementation</h2>
-    <p>Likely, I will keep the current gameplay system. If I do update it, I might make two phases: a defense phase and attack phase. During the defense phase, the CPU rolls and you choose to dodge or block depending on it. Dodging means you can mitigate the damage completely, but losing the roll means you get the full brunt of the attack. Blocking means you will always lose health based on the difference of the rolls. Even if your roll is higher, you will still lose 1 health. The attack phase is straightforward: a roll showdown between you and the CPU. If you lose, they dodged, if you win, they suffer damage depending on the difference of your rolls. It might take a bunch of time to write the JavaScript, so I am really unsure if I'll even test it out.</p>
-    <p>Otherwise, I plan to just add more decorative features and make the UI more consistent and stand out. I want to add a background, stylize the buttons and make them more noticeable, etc. For the rules, I'm thinking of adding a layer where the start page character will ask if you want the rules or not. You can choose yes or no. Yes will bring up the rule overlay automatically. No will start the game (and you can still access the rules through a button).</p>
-    <p>This is just a small thing I would love to add but I would love to add narrative to characters and have a dialogue similar to a visual novel game where you click through what they're saying. I'm not really sure how feasible it'll be for me to add that in though. We will see!</p>
+        <h2>Observations ---></h2>
+        <ol>
+            <li>Overall, the actual gameplay seems fine, according to my testers. I was struggling with how I wanted to structure it because I felt like the current way--which is if you roll lower when choosing attack, you take the full amount of the CPU roll off of your health while if you roll higher then the CPU only takes the difference (and they take no damage no matter what if you block but you will still take some damage if you roll lower)--penalizes you a lot if you happen to roll poorly against a relatively reasonable roll from the CPU. At the same time,if I made it so that if you lose the difference between your rolls when you roll lower while attacking, it would take away a lot of incentive to block instead of attack. I think mitigating the damage to always be a low number, like 1, could be a solution to give you incentive, but the game might drag on, or it might be biased towards the user. To be fair, my users weren't entirely sure of the rules and only really did one trial so that might influence their feedback.</li>
+            <li>What is there so far seems to be okay for function. The general consensus is that I need to implement more styling to make the UI more fluid, which is something I am already aware of an plan to do.</li>
+            <li>I was contemplating a few ways to implement rules, as it is crucial to understanding how to play and how to strategize. As it is, with a simple small button, it really doesn't serve the purpose it needs to because my testers immediately wen in the game and didn't even realize it was there.</li>
+        </ol>
+    </article>
+    <article>
+        <h2>Plans for Implementation ---></h2>
+        <p>Likely, I will keep the current gameplay system. If I do update it, I might make two phases: a defense phase and attack phase. During the defense phase, the CPU rolls and you choose to dodge or block depending on it. Dodging means you can mitigate the damage completely, but losing the roll means you get the full brunt of the attack. Blocking means you will always lose health based on the difference of the rolls. Even if your roll is higher, you will still lose 1 health. The attack phase is straightforward: a roll showdown between you and the CPU. If you lose, they dodged, if you win, they suffer damage depending on the difference of your rolls. It might take a bunch of time to write the JavaScript, so I am really unsure if I'll even test it out.</p>
+        <p>Otherwise, I plan to just add more decorative features and make the UI more consistent and stand out. I want to add a background, stylize the buttons and make them more noticeable, etc. For the rules, I'm thinking of adding a layer where the start page character will ask if you want the rules or not. You can choose yes or no. Yes will bring up the rule overlay automatically. No will start the game (and you can still access the rules through a button).</p>
+        <p>This is just a small thing I would love to add but I would love to add narrative to characters and have a dialogue similar to a visual novel game where you click through what they're saying. I'm not really sure how feasible it'll be for me to add that in though. We will see!</p>
+    </article>
+</div>
 </body>
 </html>
