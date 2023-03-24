@@ -5,7 +5,6 @@ body {
 figure img {
     height: 90vh;
     position:relative;
-    transition: 3s;
 }
 
 figure {
@@ -48,9 +47,13 @@ body::before {
 }
 
 .closeup {
+
+    top:50vh;
+    transform: translate(0, -50%);
     height: 100vh;
-    transform-origin: 400px 400px;
+    transform-origin: 60% 80%;
     transform: scale(3);
+    transition: 3s;
 }
 
 .show {
@@ -65,7 +68,6 @@ body::before {
  background-color: rgba(102, 0, 0, 0.8);
  position: absolute;
  opacity: 0;
- transition: opacity 3s 2s;
  text-align: center;
  vertical-align: middle;
  color: rgba(255, 255, 255, 0.4);
@@ -144,6 +146,14 @@ h1 {
     top: 0;
     margin:1vh;
     font-size: 5em;
+    text-shadow: 5px 5px #558ABB;
+    z-index: 2;
+}
+h4 {
+    position: absolute;
+    left: 5vw;
+    top: 10vh;
+    margin:1vh;
     z-index: 2;
 }
 
@@ -154,12 +164,6 @@ footer {
     width: 20vw;
 }
 
-#return {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-}
 
 .back {
     font-size: 36px;
@@ -173,4 +177,27 @@ footer {
     right: 10px;
     cursor: pointer;
     outline: none;
+}
+
+#return {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5vh;
+    width: 10vw;
+    display: none;
+    color: white;
+    background-color: transparent;
+    border-width: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    padding: 0;
+}
+
+#return:hover {
+    cursor: pointer;
+    color: red;
 }

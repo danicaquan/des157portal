@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duel of Dice</title>
+    <link rel="stylesheet" href="https://use.typekit.net/qww0pbk.css">
+    <link href="styles.css" rel="stylesheet">
+    <script src="confetti.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="startscreen" class="show">
+        <img id="startscreenimg" alt="mori, ayre, and twinkletoes at a table; twinkletoes and mori are arguing." src="images/start.png">
+        <img id="floatingdice" alt="Floating Dice" src="images/dice.png">
+        <h1>Let's Settle This Argument with a Game of Dice</h1>
+        <div id="buttonsection">
+        <button id="start">Start</button>
+        </div>
+    </div>
+
+    <div id="overlay" class="hide">
+        <section id="gameinfo">
+            <h2>Game Rules:</h2>
+            <p>It's similar to a game of war. The CPU-in this case, TwinkleToes, goes first. The player--Mori--then decides to <strong>Block</strong> or <strong>Attack</strong> based off of what Twinkle rolls.</p> 
+                <ul>
+                    <li>
+                        If Mori chooses Attack, then Mori must roll higher than Twinkle and Twinkle takes the damage of the difference in their rolls. If Mori chooses attack and loses then roll, then he takes the full damage of Twinkle's roll.
+                    </li>
+                    <li>
+                        If Mori chooses to block, then Mori will mitigate the damage he recieves from Twinkle based off the difference of you rolls. If you roll higher than Twinkle when blocking, you take no damage.
+                    </li>
+                </ul>
+            <p>Be careful about when you block and when you attack! Let's make Mori a winner!</p>
+            <button id="closerules">Got It</button>
+        </section>
+    </div>
+
+
+    <div id="dialoguebox" class="hide">
+    </div>
+    
+    <div id="gamearea" class="hide">
+        <img id="twinkle" class="twinkle-nonactive" src="images/twinkle.png" alt="twinkletoes smiling nonchalantly">
+        <img id="table" src="images/table.png" alt="table">
+        <img id="mori" class="mori-nonactive" src="images/mori.png" alt="mori, annoyed by twinkle as usual">
+        
+        <div id="announcement">
+        </div>
+    
+        <div id="player" class="dicearea">
+        </div>
+        <div id="playerhealth">
+            
+            <div id="playerhealthleft">
+                <p>20/20</p>
+            </div>
+        </div>
+        <div id="cpu" class="dicearea">
+        </div>
+        <div id="cpuhealth">
+            <div id="cpuhealthleft">
+            <p>20/20</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="controlmenu" class="hide">
+        <button id="quit">Quit</button>
+        <button id="rules">Rules</button>
+    </div>
+
+    
+</body>
+</html>

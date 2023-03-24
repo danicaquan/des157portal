@@ -31,6 +31,7 @@
         img.className='closeup';
         for (let i =0; i<sins.length; i++){
         sins[i].style.opacity = '100%';
+        sins[i].style.transition = 'opacity 3s 1s';
         indicator.style.display = 'none';
         returnBtn.style.display = 'block';
     }

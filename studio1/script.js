@@ -30,8 +30,4 @@
             comic.scrollIntoView();
         });
 
-
-    
-        
-
 })();

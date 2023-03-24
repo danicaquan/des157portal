@@ -1,0 +1,321 @@
+
+body {
+    overflow:hidden;
+    background-color: rgb(254, 247, 222);
+    background-image: url(images/game-background.png);
+    background-size: cover;
+    font-family: "rixvideogame-pro", sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+img {
+    position:absolute;
+}
+
+#mori {
+    height: 100vh;
+    transition: 1s;
+}
+.mori-active {
+    left:0vw;
+    bottom: 0;
+    opacity: 100%;
+}
+
+.mori-nonactive {
+    left:-40vw;
+    bottom: -5vh;
+    opacity: 0;
+}
+
+#table {
+    width: 100vw;
+    bottom: -10vh;
+    left: 50vw;
+    transform: translate(-50%, 0);
+}
+
+#twinkle {
+    height: 90vh;
+    transition: 1s;
+}
+
+.twinkle-active {
+    right:0;
+    bottom: -5vh;
+}
+.twinkle-nonactive {
+    right:-35vw;
+    bottom: 0;
+}
+
+#startscreen {
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(images/start-background.png);
+    background-size: cover;
+}
+
+h1{
+
+    font-family: "puffin-arcade-nerf", sans-serif;
+    text-align: center;
+    letter-spacing: 3px;
+    width: 60vw;
+    margin: 2vh auto;
+    font-size: 5vh;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 11px;
+    position: relative;
+    box-shadow: -10px 10px black;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+h1:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 10px solid white;
+    border-left: 20px solid transparent;
+    border-top: 20px solid white;
+    border-bottom: 10px solid transparent;
+    left: 48%;
+    bottom: -15%;
+    
+  }
+
+#buttonsection {
+    position: absolute;
+    left: 50vw;
+    bottom: 5vh;
+    transform: translate(-50%, -50%);
+}
+
+h2{
+    letter-spacing: 2px;
+    font-family: "puffin-arcade-nerf", sans-serif;
+    color: black;
+    font-size: 2em;
+    margin: 0.5em;
+
+}
+.show {
+    visibility: visible;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+#cpuhealth {
+    position: absolute;
+    top: 10vh;
+    right: 2vw;
+    background-color: black;
+    border: 1px solid white;
+    width: 20em;
+    height: 2em;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+#cpuhealthleft { 
+    background-color: red;
+    width: 100%;
+    height: 2em;
+    border-radius: 0.5em;
+    line-height: 2em;
+    transition: 1s ease-in-out;
+}
+#cpuhealthleft p { 
+    margin: 1vw;
+    display: inline;   
+}
+
+#playerhealth {
+    position:absolute;
+    bottom: 10vh;
+    left: 5vw;
+    background-color: black;
+    border: 1px solid white;
+    width: 20em;
+    height: 2em;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+#playerhealthleft {
+    background-color: red;
+    width: 100%;
+    height: 2em;
+    border-radius: 0.5em;
+    line-height: 2em;
+    transition: 1s ease-in-out; 
+}
+
+#playerhealthleft p { 
+    margin: 1vw;
+    display: inline;   
+}
+
+#cpu {
+    position: absolute;
+    right: 30vw;
+    top: 30vh;
+}
+
+.dicearea img {
+    position:static;
+}
+
+#player {
+    position: absolute;
+    top: 55vh;
+    left: 28vw;
+    text-align: center;
+}
+
+#player button {
+    width: 15vw;
+    font-size: 2em;
+    display: block;
+}
+
+#player button:hover {
+    background-color: black;
+    color: white;
+}
+
+#announcement { 
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
+
+#startscreenimg {
+    height: 100vh;
+    width: auto;
+    left: 50vw;
+    top: 10vh;
+    transform: translate(-50%, 0);
+    position: absolute;
+}
+
+#floatingdice {
+    width: 100vw;
+    top: -5vh;
+    position: absolute;
+    animation: float 5s ease-in-out infinite;
+}
+
+#gamearea {
+    height: 100vh;
+}
+
+@keyframes float {
+    0% {
+      transform: translatey(1px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+
+  #controlmenu {
+    position:absolute;
+    bottom: 5vh;
+    right: 5vw;
+  }
+
+  #controlmenu button {
+    font-size: 1em;
+  }
+  
+  #overlay{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+#gameinfo{
+    background-color: white;
+    color: black;
+    width: 80vw;
+    padding: 3em;
+    border-radius: 1em;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#gameinfo p {
+    text-align: left;
+}
+
+.hurt {
+    animation: hurt 0.5s ease-in-out;
+}
+
+@keyframes hurt {
+    0% {
+      transform: translatex(0px);
+    }
+    35% {
+      transform: translatex(-20px);
+    }
+    70% {
+      transform: translatex(20px);
+    }
+    100% {
+
+      transform: translatex(0px);
+    }
+  }
+
+  button {
+    width: 8vw;
+    font-size: 1.5em;
+    margin: 0.5em 0.2em;
+    font-family: "rixvideogame-pro", sans-serif;
+  }
+
+  button:hover {
+    background-color: rgb(95, 16, 0);
+    color: white;
+  }
+
+  #dialoguebox {
+    width: 100vw;
+    height: 40vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+  }
+  
+
+  #confetti-canvas {
+    position: absolute;
+    top:0;
+    left:0;
+  }
