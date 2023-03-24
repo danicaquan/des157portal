@@ -9,13 +9,18 @@ html {
 h1 {
     font-family: "lullabies-heavy", sans-serif;
     color: white;
-    font-size: 15vh;
+    font-size: 10vh;
     line-height: 1em;
-    margin:0;
+    margin:0 0.5em 0 0;
     width: 60%;
     text-align: center;
     float: right;
 }
+
+h3 {
+    font-family: Futura;
+}
+
 
 #comic div{
     text-align: center;
@@ -33,7 +38,7 @@ img {
     width: 35%;
     top: 10%;
     left: 5%;
-    font-size: 3.5vw;
+    font-size: 3vw;
 }
 
 #panel3 p {
@@ -69,10 +74,15 @@ header {
 form {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 1em;
-    padding: 2em;
+    padding: 1em 2em ;
     float: right;
     text-align: center;
-    font-family: 'Futura';
+    font-family: 'Patrick Hand';
+}
+
+form p {
+    margin: 0;
+    text-align: right;
 }
 
 h2 {
@@ -97,11 +107,12 @@ p {
 label{
     display: block;
     text-align: left;
+    font-size: 1em;
 }
 
 header div {
     display: inline-block;
-    padding: 0.5em;
+    padding: 0.3em 1em;
 }
 
 #submit {
@@ -110,9 +121,24 @@ header div {
     margin: 1em auto auto auto;
 }
 
+label::after, header p::after {
+    content: "*";
+    color: rgb(172, 28, 28);
+}
+
 
 #comic h2 {
     display: none;
+}
+
+#summer {
+    text-align: right;
+    width: 100%;
+}
+
+#comic {
+    margin: 20vh 10vh;
+
 }
 
 
@@ -145,4 +171,9 @@ header div {
     margin-top: 0;
     width: 30vw;
    }
+
+   h1, #summer {
+    font-size: 15vh;
+    width: 60%;
+}
 }

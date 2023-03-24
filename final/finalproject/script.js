@@ -55,14 +55,16 @@
         '<h3>TwinkleToes SoftTread</h3> <p>Whatever could you mean? I was not stealing!<p>',
         '<h3>Mori</h3> <p>Yes, you were! I caught you red-handed with your grubby paws in my bag! Taking my rope! I need all 50 feet of that!<p>',
         '<h3>TwinkleToes SoftTread</h3> <p>No, no. You misunderstand me. I was merely trying to hold onto your rope to keep it safe for you! That is what friends do for one another, and you are one of my best friends!<p>',
-        '<h3>Mori</h3> <p>For the last time: WE. ARE. NOT. FRIENDS. Ayre, please help me out!<p>'
+        '<h3>Mori</h3> <p>For the last time: WE. ARE. NOT. FRIENDS. Ayre, please help me out!<p>',
+        '<h3>Ayre</h3> <p>...<p>',
+        '<h3>Ayre</h3> <p>How about...<p>'
     ]
     window.onload = function () {
         if (localStorage.getItem("hasCodeRunBefore") === null) {
             /** Your code here. **/
 
              dialogueBox.className='show';
-             dialogueBox.innerHTML=`${dialogue[currentText]}`
+             dialogueBox.innerHTML=`${dialogue[currentText]} <p> Click to Advance Text --></p>`
             localStorage.setItem("hasCodeRunBefore", true);
         }
         else {
@@ -82,7 +84,7 @@
         dialogueBox.innerHTML = `${dialogue[currentText]}`;
     }
     };
-    dialogueBox.addEventListener('click', nextText)
+    window.addEventListener('click', nextText)
     
     quitBtn.addEventListener('click', function(){
         btnClick.play();

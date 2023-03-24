@@ -56,14 +56,15 @@
         eachSin.addEventListener('click', function(event){
             const thisSin = event.target.id;
             console.log(`${thisSin}`);
-            document.querySelector(`#${thisSin}info`).style.opacity = '100%';
+            
+            document.querySelector(`#${thisSin}info`).style.visibility = 'visible';
             document.querySelector(`#${thisSin}info`).style.display = 'flex';
+            document.querySelector(`#${thisSin}info h2`).style.transform = 'translate(0, 0)';
+            document.querySelector(`#${thisSin}info div`).style.transform = 'translate(0, 0)';
             for (const eachBtn of backInfo) {
                 eachBtn.addEventListener('click', function(event){
-                    document.querySelector(`#${thisSin}info`).style.opacity = '0';
-                    document.querySelector(`#${thisSin}info`).style.display = 'none';
-        
-                
+
+            document.querySelector(`#${thisSin}info`).style.left = '-100vw';
             });
         }
         
