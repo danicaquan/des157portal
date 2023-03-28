@@ -256,19 +256,24 @@ h2{
 #gameinfo{
     background-color: white;
     color: black;
-    width: 80vw;
+    width: 70vw;
+    height: auto;
     padding: 3em;
     border-radius: 1em;
     position: absolute;
     top: 50vh;
     left: 50vw;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, -50%);
     text-align: center;
     font-size: 1.5em;
 }
 
 #gameinfo p {
     text-align: left;
+}
+
+#gameinfo button {
+    font-size: 1em;
 }
 
 .hurt {
