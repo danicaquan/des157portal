@@ -139,7 +139,7 @@
         }
 
     function checkWinningCondition(){
-        if (gameData.score[gameData.index] > gameData.gameEnd){
+        if (gameData.score[gameData.index] >= gameData.gameEnd){
             announcement.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
 
             actionArea.innerHTML = '';

@@ -25,6 +25,7 @@
     const closeBtn = document.getElementById('closerules');
     const quitBtn = document.getElementById('quit');
     const dialogueBox = document.getElementById('dialoguebox');
+    const dialogueBoxText = document.getElementById('dialogueboxtext');
     const diceRollSound = new Audio('audio/diceRoll.mp3');
     const hitSound = new Audio('audio/hit.mp3');
     const loseSound = new Audio('audio/lose.mp3');
@@ -51,28 +52,20 @@
     }
 
     const dialogue = [
-        '<h3>Mori</h3> <p>For the last time Kender, stop trying to steal from me or I will chop off your hands<p>',
-        '<h3>TwinkleToes SoftTread</h3> <p>Whatever could you mean? I was not stealing!<p>',
-        '<h3>Mori</h3> <p>Yes, you were! I caught you red-handed with your grubby paws in my bag! Taking my rope! I need all 50 feet of that!<p>',
-        '<h3>TwinkleToes SoftTread</h3> <p>No, no. You misunderstand me. I was merely trying to hold onto your rope to keep it safe for you! That is what friends do for one another, and you are one of my best friends!<p>',
-        '<h3>Mori</h3> <p>For the last time: WE. ARE. NOT. FRIENDS. Ayre, please help me out!<p>',
-        '<h3>Ayre</h3> <p>...<p>',
-        '<h3>Ayre</h3> <p>How about...<p>'
+        '<h3>Mori</h3> <p>> For the last time Kender, stop trying to steal from me or I will chop off your hands<p>',
+        '<h3>TwinkleToes SoftTread</h3> <p>> Whatever could you mean? I was not stealing!<p>',
+        '<h3>Mori</h3> <p>> Yes, you were! I caught you red-handed with your grubby paws in my bag! Taking my rope! I need all 50 feet of that!<p>',
+        '<h3>TwinkleToes SoftTread</h3> <p>> No, no. You misunderstand me. I was merely trying to hold onto your rope to keep it safe for you! That is what friends do for one another, and you are one of my best friends!<p>',
+        '<h3>Mori</h3> <p>> For the last time: WE. ARE. NOT. FRIENDS. Ayre, please help me out!<p>',
+        '<h3>Ayre</h3> <p>> ...<p>',
+        '<h3>Ayre</h3> <p>> How about...<p>'
     ]
-    window.onload = function () {
-        if (localStorage.getItem("hasCodeRunBefore") === null) {
-            /** Your code here. **/
 
-             dialogueBox.className='show';
-             dialogueBox.innerHTML=`${dialogue[currentText]} <p> Click to Advance Text --></p>`
-            localStorage.setItem("hasCodeRunBefore", true);
-        }
-        else {
-            document.querySelector('#startscreen h1').style.opacity= '100%';
-    }
-    }
+    dialogueBox.className='show';
 
     let currentText = 0;
+    dialogueBoxText.innerHTML=`${dialogue[currentText]}`
+
     function nextText(){
         currentText++;
 
@@ -81,10 +74,16 @@
             document.querySelector('#startscreen h1').style.opacity= '100%';
         }
         else {
-        dialogueBox.innerHTML = `${dialogue[currentText]}`;
+        dialogueBoxText.innerHTML = `${dialogue[currentText]}`;
     }
     };
     window.addEventListener('click', nextText)
+
+    document.querySelector('#skipbutton').addEventListener('click', function(){
+        btnClick.play();
+        dialogueBox.className='hide';
+            document.querySelector('#startscreen h1').style.opacity= '100%';
+    });
     
     quitBtn.addEventListener('click', function(){
         btnClick.play();

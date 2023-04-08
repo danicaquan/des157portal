@@ -137,6 +137,7 @@ body::before {
     transform: translate(0, -100vh);
     margin: 0;
     background-color: rgb(151, 26, 26);
+    box-sizing: border-box;
     height: 100vh;
     width: 20vw;
     padding: 5vw;
@@ -145,12 +146,10 @@ body::before {
     font-size: 5em;
     writing-mode: vertical-rl; text-orientation: upright;
     text-shadow: 5px 5px white;
-
- font-family: "alta-california", sans-serif;
+    font-family: "alta-california", sans-serif;
 }
 
 .info div {
-
     transform: translate(-100vw, 0);
     background-color: white;
     padding: 3em;
@@ -158,7 +157,6 @@ body::before {
     align-items: center;
     display: flex;
     height: 60vh;
-    transition: 1s 1s;
 }
 
 h1 {

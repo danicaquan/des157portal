@@ -9,7 +9,7 @@ body {
     width: 100vw;
 }
 img {
-    position:absolute;
+    position: absolute;
 }
 
 #mori {
@@ -44,6 +44,7 @@ img {
     right:0;
     bottom: -5vh;
 }
+
 .twinkle-nonactive {
     right:-35vw;
     bottom: 0;
@@ -114,6 +115,12 @@ h2{
     visibility: hidden;
 }
 
+#twinklename {
+    position: absolute;
+    top: 5vh;
+    right: 2vw;
+}
+
 #cpuhealth {
     position: absolute;
     top: 10vh;
@@ -134,9 +141,17 @@ h2{
     line-height: 2em;
     transition: 1s ease-in-out;
 }
+
 #cpuhealthleft p { 
     margin: 1vw;
     display: inline;   
+}
+
+#moriname {
+    position:absolute;
+    bottom: 13vh;
+    left: 5vw;
+    color: gray;
 }
 
 #playerhealth {
@@ -253,6 +268,7 @@ h2{
     left: 0;
     z-index: 100;
 }
+
 #gameinfo{
     background-color: white;
     color: black;
@@ -323,4 +339,31 @@ h2{
     position: absolute;
     top:0;
     left:0;
+  }
+
+  #dialoguebox{
+    padding: 0.5em 1em;
+    border: 5px solid black; 
+    font-size: 1.3em;
+    box-sizing: border-box;
+  }
+
+  #dialogueboxtext h3{
+    margin: 0.5em 0;
+    font-family: "puffin-arcade-nerf", sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+  }
+
+  #skipbutton {
+    position: absolute;
+    right: 3vw;
+    bottom: 5vh;
+    font-size: 0.9em;
+  }
+
+  #advancetxt {
+    font-size: 0.7em;
+    padding: 0 0 0 1vw;
+    color: grey;
   }

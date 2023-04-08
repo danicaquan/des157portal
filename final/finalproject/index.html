@@ -27,7 +27,7 @@
             <p>It's similar to a game of war. The CPU-in this case, TwinkleToes, goes first. The player--Mori--then decides to <strong>Block</strong> or <strong>Attack</strong> based off of what Twinkle rolls.</p> 
                 <ul>
                     <li>
-                        If Mori chooses Attack, then Mori must roll higher than Twinkle and Twinkle takes the damage of the difference in their rolls. If Mori chooses attack and loses then roll, then he takes the full damage of Twinkle's roll.
+                        If Mori chooses Attack, then Mori must roll higher than Twinkle and Twinkle takes the damage of the difference in their rolls. If Mori chooses Attack and loses then roll, then he takes the full damage of Twinkle's roll.
                     </li>
                     <li>
                         If Mori chooses to block, then Mori will mitigate the damage he recieves from Twinkle based off the difference of you rolls. If you roll higher than Twinkle when blocking, you take no damage.
@@ -40,6 +40,9 @@
 
 
     <div id="dialoguebox" class="hide">
+        <div id="dialogueboxtext"></div>
+        <p id="advancetxt">Click to Advance Text --></p>
+        <button id="skipbutton">Skip</button>
     </div>
     
     <div id="gamearea" class="hide">
@@ -52,14 +55,17 @@
     
         <div id="player" class="dicearea">
         </div>
+
+        <p id="moriname">Mori</p>
         <div id="playerhealth">
-            
+
             <div id="playerhealthleft">
                 <p>20/20</p>
             </div>
         </div>
         <div id="cpu" class="dicearea">
         </div>
+        <p id="twinklename">TwinkleToes</p>
         <div id="cpuhealth">
             <div id="cpuhealthleft">
             <p>20/20</p>

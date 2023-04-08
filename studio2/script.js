@@ -62,12 +62,17 @@
             
             document.querySelector(`#${thisSin}info`).style.visibility = 'visible';
             document.querySelector(`#${thisSin}info`).style.display = 'flex';
+
+            document.querySelector(`#${thisSin}info div`).style.transition = '1s 1s'
             document.querySelector(`#${thisSin}info h2`).style.transform = 'translate(0, 0)';
             document.querySelector(`#${thisSin}info div`).style.transform = 'translate(0, 0)';
             for (const eachBtn of backInfo) {
                 eachBtn.addEventListener('click', function(event){
 
-            document.querySelector(`#${thisSin}info`).style.left = '-100vw';
+            document.querySelector(`#${thisSin}info`).style.visibility = 'hidden';
+            document.querySelector(`#${thisSin}info div`).style.transition = '1s'
+            document.querySelector(`#${thisSin}info h2`).style.transform = 'translate(0, -100vh)';
+            document.querySelector(`#${thisSin}info div`).style.transform = 'translate(-100vw, 0)';
             });
         }
         
