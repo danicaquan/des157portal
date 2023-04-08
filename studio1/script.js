@@ -43,6 +43,11 @@
         }
 }
 
+function capitalize (word) {
+   const capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1);
+   return capitalizedWord;
+}
+
     function showErrors (formData, emptyfields) {
         const errorID = formData[emptyfields[0]].id;
         const errorText = `Please fill out the marked fields:`;
@@ -50,25 +55,27 @@
         document.querySelector('form h2').innerHTML = errorText;
         document.querySelector(`#${errorID}`).focus();
     }
+
     function makeComic(){
-    const comic = document.querySelector('#comic');
-    const est = document.querySelector('#est').value;
-    const adj1 = document.querySelector('#adj1').value.charAt(0).toUpperCase();
-    const name = document.querySelector('#name').value.charAt(0).toUpperCase();;
-    const num = document.querySelector('#num').value;
-    const adj2 = document.querySelector('#adj2').value;
-    const noun = document.querySelector('#noun').value;
-    const day = document.querySelector('#day').value;
-    const location = document.querySelector('#location').value;
-    const daytime = document.querySelector('#daytime').value;
-    const brand = document.querySelector('#brand').value;
-            comic.className="show";
+        const comic = document.querySelector('#comic');
+        const est = document.querySelector('#est').value;
+        const adj1 = document.querySelector('#adj1').value;
+        const name = document.querySelector('#name').value;
+        const num = document.querySelector('#num').value;
+        const adj2 = document.querySelector('#adj2').value;
+        const noun = document.querySelector('#noun').value;
+        const day = document.querySelector('#day').value;
+        const location = document.querySelector('#location').value;
+        const daytime = document.querySelector('#daytime').value;
+        const brand = document.querySelector('#brand').value;
+        comic.className="show";
 
-            panel2.innerHTML = `Hello my <b>${est}</b> Ayre, it is me, <b>${adj1} ${name}</b>, once again coming to woo you for the <b>${num}</b> time today!`
-            panel3.innerHTML = `Your <b>${adj2}</b> eyes sparkle in the moonlight like <b>${noun}</b> that reflects the light and shines into my soul. Would you perchance, do me the honor of going on a date with me? Perhaps next <b>${day}</b>, at <b>${daytime}</b>, in <b>${location}</b>?`
-            panel5.innerHTML = `Sorry, I had my <b>${brand}</b> earbuds in. What did you say?`
 
-            comic.scrollIntoView();
+        panel2.innerHTML = `Hello my <b>${est}</b> Ayre, it is me, <b>${capitalize(adj1)} ${capitalize(name)}</b>, once again coming to woo you for the <b>${num}</b> time today!`
+        panel3.innerHTML = `Your <b>${adj2}</b> eyes sparkle in the moonlight like <b>${noun}</b> that reflects the light and shines into my soul. Would you perchance, do me the honor of going on a date with me? Perhaps next <b>${day}</b>, at <b>${daytime}</b>, in <b>${location}</b>?`
+        panel5.innerHTML = `Sorry, I had my <b>${brand}</b> earbuds in. What did you say?`
+
+        comic.scrollIntoView();
         }
 
 })();

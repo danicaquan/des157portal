@@ -34,6 +34,7 @@
         sins[i].style.transition = 'opacity 3s 1s';
         indicator.style.display = 'none';
         returnBtn.style.display = 'block';
+        document.querySelector('footer').style.color = 'darkgray';
     }
     });
 
@@ -43,6 +44,8 @@
         sins[i].style.opacity = '0';
         indicator.style.display = 'block';
         returnBtn.style.display = 'none';
+        sins[i].style.transition = 'opacity 2s';
+        document.querySelector('footer').style.color = 'black';
     }
     });
 
@@ -54,7 +57,7 @@
 
     for (const eachSin of sins) {
         eachSin.addEventListener('click', function(event){
-            const thisSin = event.target.id;
+            const thisSin = event.currentTarget.id;
             console.log(`${thisSin}`);
             
             document.querySelector(`#${thisSin}info`).style.visibility = 'visible';
